@@ -1,0 +1,8 @@
+filter:
+  excluede_header:
+    - accept
+    - accept-language
+  white_header:
+    - content-type
+  excluede_verify:
+    - traceId
