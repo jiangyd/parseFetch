@@ -147,7 +147,7 @@ class parseFetch(object):
                 resp = requests.request(method=req["method"], url=url, headers=req["headers"], data=req["body"])
                 data = resp.json()
                 status_code = resp.status_code
-                print(json.dumps(data, indent=4))
+                print(json.dumps(data, indent=4,ensure_ascii=False))
 
             some_test["request"]["validate"] = self.filter(data=data, status_code=status_code, type="verify")
             yamldata["api"].append({"test": json.loads(json.dumps(some_test))})
